@@ -1,0 +1,45 @@
+# Vetor: possui 1 dimensão e 1 tipo de dado
+vetor1 <- c(1:20)
+vetor1
+length(vetor1)
+mode(vetor1)
+class(vetor1)
+typeof(vetor1)
+
+# Matriz: possui 2 dimensões e 1 tipo de dado
+matriz1 <- matrix(1:20, nrow = 2)
+matriz1
+length(matriz1)
+mode(matriz1)
+class(matriz1)
+typeof(matriz1)
+
+# Array: possui 2 ou mais dimensões e 1 tipo de dado
+array1 <- array(1:5, dim = c(3,3,3))
+array1
+length(array1)
+mode(array1)
+class(array1)
+typeof(array1)
+
+# Data Frames: dados de diferentes tipos
+# É uma matriz com diferentes tipos de dados
+View(iris) # Visualizar data frame
+length(iris)
+mode(iris)
+class(iris)
+typeof(iris)
+
+# Listas: coleção de diferentes objetos
+lista1 <- list(a = matriz1, b = vetor1)
+lista1
+
+# Funções também são objetos
+func1 <- function(x) {
+  var1 <- x * x
+  return(var1)
+}
+func1(5)
+
+class(func1)
+
