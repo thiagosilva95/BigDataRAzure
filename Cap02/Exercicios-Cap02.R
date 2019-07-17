@@ -29,11 +29,16 @@ names(df) = c("config", "esfc", "chang")
 df
 
 # Exercício 6 - Imprima na tela o dataframe iris, verifique quantas dimensões existem no dataframe iris e imprima um resumo do dataset
+df_iris = data.frame(iris)
+df_iris
+dim(df_iris)
+summary(df_iris)
 
 # Exercício 7 - Crie um plot simples usando as duas primeiras colunas do dataframe iris
 
 # Exercício 8 - Usando a função subset, crie um novo dataframe com o conjunto de dados do dataframe iris em que Sepal.Length > 7
 # Dica: consulte o help para aprender como usar a função subset()
+subset(df_iris, Sepal.Length > 7)
 
 # Exercícios 9 (Desafio) - Crie um dataframe que seja cópia do dataframe iris e usando a função slice(), divida o dataframe em um subset de 15 linhas
 # Dica 1: Você vai ter que instalar e carregar o pacote dplyr
