@@ -12,16 +12,21 @@ getwd()
 # Exercício 1 - Crie um vetor com 30 números inteiros
 vetor1 = c(1:30)
 vetor1
+
 # Exercício 2 - Crie uma matriz com 4 linhas e 4 colunas preenchida com números inteiros
-matrix(c(1,2,3,4,5,6,7,8), nr = 4, nc = 4)
+matriz1 = matrix(c(1,2,3,4,5,6,7,8), nr = 4, nc = 4)
 
 # Exercício 3 - Crie uma lista unindo o vetor e matriz criados anteriormente
+list(vetor1, matriz1)
 
 # Exercício 4 - Usando a função read.table() leia o arquivo do link abaixo para uma dataframe
 # http://data.princeton.edu/wws509/datasets/effort.dat
-
+df = data.frame(read.table('http://data.princeton.edu/wws509/datasets/effort.dat'))
+df
 # Exercício 5 - Transforme o dataframe anterior, em um dataframe nomeado com os seguintes labels:
 # c("config", "esfc", "chang")
+names(df) = c("config", "esfc", "chang")
+df
 
 # Exercício 6 - Imprima na tela o dataframe iris, verifique quantas dimensões existem no dataframe iris e imprima um resumo do dataset
 
