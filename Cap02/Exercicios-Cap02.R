@@ -6,12 +6,14 @@
 # Configurando o diretório de trabalho
 # Coloque entre aspas o diretório de trabalho que você está usando no seu computador
 # Não use diretórios com espaço no nome
-setwd("C:/FCD/BigDataRAzure/Cap02")
+setwd("F:/projects/R/dsa/BigDataRAzure")
 getwd()
 
 # Exercício 1 - Crie um vetor com 30 números inteiros
-
+vetor1 = c(1:30)
+vetor1
 # Exercício 2 - Crie uma matriz com 4 linhas e 4 colunas preenchida com números inteiros
+matrix(c(1,2,3,4,5,6,7,8), nr = 4, nc = 4)
 
 # Exercício 3 - Crie uma lista unindo o vetor e matriz criados anteriormente
 
