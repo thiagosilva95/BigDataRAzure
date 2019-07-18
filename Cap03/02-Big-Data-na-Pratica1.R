@@ -15,6 +15,9 @@ library(data.table)
 
 # Carregando dados
 # Usando read.csv()
-system.time((df_teste1 <- read.csv("TemperaturasGlobais/TemperaturasGlobais.csv")))
-# Usando read.table()
-system.time((df_teste2 <- read.table("TemperaturasGlobais/TemperaturasGlobais.csv")))
+system.time(df_teste1 <- read.csv2("TemperaturasGlobais/TemperaturasGlobais.csv"))
+# Usando read.table()   
+system.time(df_teste2 <- read.table("TemperaturasGlobais/TemperaturasGlobais.csv"))
+# Usando fread()
+?fread
+system.time(df <- fread("TemperaturasGlobais/TemperaturasGlobais.csv"))
