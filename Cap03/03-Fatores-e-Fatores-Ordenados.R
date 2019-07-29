@@ -58,3 +58,9 @@ plot(df$Idade~df$Etnia, xlab = "Etnia", ylab = "Idade", main = "Idade por Etnia"
 
 # Regressão
 summary(lm(Idade~Etnia, data = df))
+df
+str(df)
+
+df$Estado_Civil.cat <- factor(df$Estado_Civil, labels = c("Solteiro", "Casado", "Divorciado"))
+df
+str(df)
