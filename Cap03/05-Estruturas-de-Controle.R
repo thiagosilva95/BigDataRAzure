@@ -31,3 +31,16 @@ for (i in 1:20) {
 }
 
 # Ignora alguns elementos dentro do loop
+
+for (i in 1:22) {
+  if(i ==13 | i ==15) {
+    next
+  }
+  print(i)
+}
+
+x = 1
+while (x < 5) {
+  x = x + 1
+  print(x)  
+}
