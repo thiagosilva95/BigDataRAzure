@@ -33,3 +33,17 @@ jogando_dados <- function() {
 jogando_dados()
 
 # Funções sem número definido de argumentos
+vec1 <- (10:13)
+vec2 <- c("a", "b", "c", "d")
+vec3 <- c(6.5, 9.2, 11.9, 5.1)
+
+myFunc3 <- function(...) {
+  df = data.frame(cbind(...))
+  print(df)
+}
+myFunc3(vec1)
+
+myFunc3(vec1, vec2)
+
+myFunc3(vec1, vec2, vec3)
+
