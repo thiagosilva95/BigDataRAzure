@@ -50,3 +50,61 @@ escola
 escola$Media = round(escola$Media)
 escola
 
+# tapply()
+?gl
+tabela_basquete <-
+  data.frame(equipe = gl(5, 5, labels = paste("Equipe", LETTERS[1:5])),
+             jogador = sample(letters, 25),
+             num_cestas = floor(runif(25, min=0, max=50)))
+
+
+View(tabela_basquete)
+summary(tabela_basquete)
+
+install.packages('sqldf')
+library(sqldf)
+
+sqldf("select equipe, sum(num_cestas) from tabela_basquete group by equipe")
+
+tapply(tabela_basquete$num_cestas, tabela_basquete$equipe, sum)
+tapply(tabela_basquete$num_cestas, tabela_basquete$equipe, mean)
+
+# by
+?by
+
+dat <- data.frame(species=c(rep(c(1,2,3), each=5)), 
+                  petal.length=c(rnorm(5, 4.5, 1), 
+                                 rnorm(5, 4.5, 1), 
+                                 rnorm(5, 5.5, 1)), 
+                  petal.width=c(rnorm(5, 2.5, 1), 
+                                rnorm(5, 2.5, 1), 
+                                rnorm(5, 4, 1)))
+
+dat$species <- factor(dat$species)
+View(dat)
+
+by(dat, dat$species, function(x) {
+  # Calcular o comprimento médio da petala para cada espécie
+    mean.pl <- mean(x$petal.length)
+})
+
+# lapply()
+?lapply
+
+lista1 <- list(a = (1:10), b = (45:77))
+lista1
+lapply(lista1, sum)
+sapply(lista1, sum)
+
+# vapply()
+?vapply
+
+# A função fivenum() retorna 5 estatísticas do conjunto de dados: (minimum, lower-hinge, median, upper-hinge, maximum) 
+# https://stat.ethz.ch/R-manual/R-patched/library/stats/html/fivenum.html
+vapply(lista1, 
+       fivenum, 
+       c(Min. = 0, 
+         "1stQu." = 0, 
+         Median = 0, 
+         "3rd Qu." = 0, 
+         Max = 0))
