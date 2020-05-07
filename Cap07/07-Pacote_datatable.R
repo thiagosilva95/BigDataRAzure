@@ -47,7 +47,7 @@ new_dt4 <- dt4[, sum(B), by = A][order(A)]
 new_dt4
 
 # Iris
-dt5 <- as.data.frame(iris)
+dt5 <- data.table(iris)
 View(dt5)
 dt5[, .(Sepal.Length = median(Sepal.Length),
         Sepal.Width = median(Sepal.Width),
